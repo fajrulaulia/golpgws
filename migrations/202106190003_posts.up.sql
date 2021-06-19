@@ -1,0 +1,7 @@
+CREATE TABLE posts(
+    id UUID NOT NULL PRIMARY KEY DEFAULT gen_random_uuid(),
+    title VARCHAR(50),
+    content TEXT,
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
